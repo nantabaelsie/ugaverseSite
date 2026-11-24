@@ -7,6 +7,7 @@ The website for **Ugaverse Studios**, a Ugandan creative technology studio that 
 ## Live demos
 
 - [Buganda Palace tour](https://www.ugaverse.com/projects/buganda-palace-tour/): an interactive 3D heritage tour.
+- [Timeless Frames](https://www.ugaverse.com/projects/timeless-frames/): a photo exhibition tour.
 - [Daddy's House](https://www.ugaverse.com/daddys-house.html): a project page with a 360° video player.
 
 ## What's on the site
