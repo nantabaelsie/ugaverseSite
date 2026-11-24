@@ -28,7 +28,9 @@ The website for **Ugaverse Studios**, a Ugandan creative technology studio that 
 
 ## My role
 
-I designed and built the site: layout, responsive behaviour, image handling and the project pages.
+Designed and directed by me: the layout, content, structure and project pages. Built with AI assistance (Claude Code) for implementation.
+
+The site is plain static HTML, CSS and JavaScript by design: fast, no dependencies and easy to maintain.
 
 ## Running it locally
 
