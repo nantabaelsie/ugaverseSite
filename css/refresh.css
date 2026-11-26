@@ -143,7 +143,7 @@
     height: 100%;
     flex-direction: column;
     overflow: hidden;
-    border: 3px solid var(--yellow);
+    border: 0;
     border-radius: var(--radius-md);
     background: rgba(255, 255, 255, 0.07);
     box-shadow: 0.625rem 0.625rem 0 rgba(242, 196, 15, 0.28);
@@ -1408,5 +1408,231 @@ button.work-card__go {
     .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
         scale: 1.45;
         transform-origin: 54% 20%;
+    }
+}
+
+/* ---------- Wider phones (about 26rem to 47.99rem): zoom slide 1 a little, so the people at the left and right edges fall outside the picture.
+   The wider the phone, the more of the photo shows, so the zoom steps up. Tablets (48rem+) have their own zoom above. ---------- */
+
+@media (min-width: 26rem) and (max-width: 47.99rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.1;
+        transform-origin: 54% 20%;
+    }
+}
+
+@media (min-width: 30rem) and (max-width: 47.99rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.25;
+    }
+}
+
+@media (min-width: 36rem) and (max-width: 47.99rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.4;
+    }
+}
+
+@media (min-width: 42rem) and (max-width: 47.99rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.5;
+    }
+}
+
+/* ---------- Interactive experience card: the photo has room above the dome, so the yellow tag does not sit on the palace ---------- */
+
+#interactive .rf-offer__media img {
+    object-position: 40% 20%;
+}
+
+/* ---------- Tablets (about 40rem to 63.99rem): the Services cards and the Buganda Palace project card go side by side,
+   photo on the left and words on the right, so each card is much less tall. Same width as before. ---------- */
+
+@media (min-width: 40rem) and (max-width: 63.999rem) {
+    .rf-offer {
+        flex-direction: row;
+    }
+
+    .rf-offer__media {
+        flex: 0 0 44%;
+        aspect-ratio: auto;
+        min-height: 13rem;           /* the least height the photo gets; the card grows with its words if they need more */
+    }
+
+    .rf-offer__media img {
+        position: absolute;
+        inset: 0;
+    }
+
+    .rf-offer__body {
+        justify-content: center;
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .rf-explore .work-card--feature {
+        flex-direction: row;
+    }
+
+    .rf-explore .work-card--feature .work-card__media {
+        flex: 0 0 48%;
+        aspect-ratio: auto;
+        min-height: 13rem;
+    }
+
+    .rf-explore .work-card--feature .work-card__media img {
+        position: absolute;
+        inset: 0;
+        object-position: 50% 10%;
+    }
+
+    .rf-explore .work-card--feature .work-card__body {
+        justify-content: center;
+        padding: var(--space-4) var(--space-6);
+    }
+}
+
+/* ---------- Tablets: the Timeless Frames and Daddy's House cards have shorter photos, and the Kyanja film thumbnail is a bit smaller ---------- */
+
+@media (min-width: 40rem) and (max-width: 63.999rem) {
+    .rf-explore .work-card:not(.work-card--feature) .work-card__media {
+        aspect-ratio: 16 / 9;
+    }
+
+    .rf-explore .film__player {
+        max-width: 38rem;
+    }
+}
+
+/* ---------- Tablets (about 40rem to 63.99rem): the About section is a narrower column, centred on the page with the photo centred in it;
+   the Kyanja film thumbnail and its words are centred too. Phones keep the full width, desktop keeps its two columns. ---------- */
+
+@media (min-width: 40rem) and (max-width: 63.999rem) {
+    .rf-about {
+        max-width: 36rem;
+        margin-inline: auto;
+        padding-inline: var(--space-4);
+    }
+
+    .rf-about__photos {
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .rf-explore .film__player {
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .rf-explore .film__text {
+        max-width: 38rem;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .rf-explore .film__button {
+        margin-inline: auto;
+    }
+}
+
+/* ---------- Tools cards: the same look as the Services cards (no border, soft sky-blue card, dark shadow, navy button with gold text) ---------- */
+
+.rf-equip .work-card {
+    border: 0;
+    background: linear-gradient(rgba(var(--c-tint, 120, 190, 250), 0.40), rgba(var(--c-tint, 120, 190, 250), 0.40)), var(--off-white);
+    box-shadow: 0.625rem 0.625rem 0 var(--blue-night);
+}
+
+.rf-equip .work-card:hover {
+    box-shadow: 0.875rem 0.875rem 0 var(--blue-night);
+}
+
+.rf-equip .work-card h3 {
+    color: var(--blue-outline);
+}
+
+.rf-equip .work-card__body {
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+/* the card actions look like the Services buttons: navy, gold text */
+.rf-equip .work-card__go {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    min-height: 48px;
+    margin-top: auto;
+    padding: var(--space-3) var(--space-6);
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: var(--blue);
+    color: var(--yellow);
+    font-family: var(--font-label);
+    font-size: var(--text-base);
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.rf-equip .work-card:hover .work-card__go,
+.rf-equip .work-card__go:hover {
+    background: var(--blue-dark);
+}
+
+@media (min-width: 64rem) {
+    .rf-equip .work-card__body {
+        gap: var(--space-4);
+        padding: var(--space-6) var(--space-8) var(--space-8);
+    }
+}
+
+.rf-equip .work-card__go {
+    gap: var(--space-2);
+}
+
+/* tablets: the Tools cards go side by side too, photo left and words right, like the Services cards */
+@media (min-width: 40rem) and (max-width: 63.999rem) {
+    .rf-equip .work-card {
+        flex-direction: row;
+    }
+
+    .rf-equip .work-card__media {
+        flex: 0 0 44%;
+        aspect-ratio: auto;
+        min-height: 13rem;
+    }
+
+    .rf-equip .work-card__media img {
+        position: absolute;
+        inset: 0;
+    }
+
+    .rf-equip .work-card__body {
+        justify-content: center;
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .rf-equip .work-card__go {
+        margin-top: var(--space-2);
+    }
+}
+
+/* Tools cards: a lighter shadow, since they sit on a light background */
+.rf-equip .work-card {
+    box-shadow: 0.625rem 0.625rem 0 rgba(22, 42, 100, 0.32);
+}
+
+.rf-equip .work-card:hover {
+    box-shadow: 0.875rem 0.875rem 0 rgba(22, 42, 100, 0.32);
+}
+
+/* Tools cards on phones: the photo is wider and shorter (same shape as the website screenshot), so the whole screenshot shows and the three cards match */
+@media (max-width: 39.999rem) {
+    .rf-equip .work-card__media {
+        aspect-ratio: 857 / 537;
+    }
+
+    .rf-equip .work-card__media img {
+        object-position: 50% 50%;
     }
 }
