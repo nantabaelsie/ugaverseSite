@@ -1,0 +1,1412 @@
+/* Ugaverse homepage refresh (index-refresh.html). Sits on top of style-system.css and studio.css.
+   Only the new pieces live here: hero slide copy, the three doors, the Create offers, the rules on light, the Equip cards. */
+
+/* ---------- Hero: the tagline stays fixed (it is the h1), each slide brings its own headline, line and button ---------- */
+
+.rf-hero .studio-hero__lines {
+    margin: 0 0 var(--space-6);
+}
+
+.rf-copy {
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 700ms ease, transform 700ms ease, visibility 0s linear 700ms;
+}
+
+.rf-copy.is-active {
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 700ms ease, transform 700ms ease, visibility 0s;
+}
+
+.rf-copy__title {
+    max-width: 16ch;
+    margin: 0 0 var(--space-4);
+    font-family: var(--font-display);
+    font-size: clamp(2.125rem, 1.1rem + 4vw, 3.75rem);
+    line-height: var(--lh-display);
+}
+
+.rf-copy__sub {
+    max-width: 34rem;
+    margin: 0 0 var(--space-6);
+    font-size: var(--text-lead);
+    line-height: var(--lh-body);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.rf-copy .button {
+    text-shadow: none;
+}
+
+.rf-hero .studio-hero__slide--enju img {
+    object-position: 60% 25%;
+}
+
+/* ---------- Three doors ---------- */
+
+.rf-doors {
+    color: var(--white);
+}
+
+.rf-doors__grid {
+    display: grid;
+    gap: var(--space-6);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rf-door {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-6);
+    border: 3px solid var(--yellow);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0.625rem 0.625rem 0 rgba(242, 196, 15, 0.28);
+    color: var(--white);
+    text-decoration: none;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.rf-door:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 0.875rem 0.875rem 0 rgba(242, 196, 15, 0.28);
+}
+
+.rf-door:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 4px;
+}
+
+.rf-door__num {
+    color: var(--yellow);
+    font-family: var(--font-label);
+    letter-spacing: 0.1em;
+}
+
+.rf-door h3 {
+    margin: 0;
+    color: var(--yellow);
+    font-size: 1.75rem;
+}
+
+.rf-door p {
+    margin: 0;
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.rf-door__go {
+    margin-top: auto;
+    padding-top: var(--space-4);
+    font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+    .rf-doors__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Explore: with three cards the grid is two across, so the last row is never half empty ---------- */
+
+@media (min-width: 64rem) {
+    .rf-explore .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Create (on the blue) ---------- */
+
+.rf-create {
+    color: var(--white);
+}
+
+.rf-create .studio-lead {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.rf-offers {
+    display: grid;
+    gap: var(--space-6);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rf-offer {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border: 3px solid var(--yellow);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0.625rem 0.625rem 0 rgba(242, 196, 15, 0.28);
+}
+
+.rf-offer__media {
+    margin: 0;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background: var(--blue-night);
+}
+
+.rf-offer__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rf-offer__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+.rf-offer h3 {
+    margin: 0;
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+
+.rf-offer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.rf-offer__example {
+    margin-top: auto;
+    padding-top: var(--space-2);
+    font-size: 0.9375rem;
+}
+
+.rf-offer__example a {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.rf-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rf-chips li {
+    padding: var(--space-1) var(--space-3);
+    border: 2px solid var(--yellow);
+    border-radius: 999px;
+    color: var(--yellow);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.rf-create__more {
+    margin: var(--space-12) 0 0;
+    text-align: center;
+}
+
+.rf-create__who {
+    margin: 0 0 var(--space-6);
+    font-family: var(--font-display);
+    font-size: var(--text-sub);
+    line-height: var(--lh-heading);
+}
+
+@media (min-width: 48rem) {
+    .rf-offers {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ---------- The rules, on the light background ---------- */
+
+.rf-rules .principles {
+    gap: var(--space-6);
+}
+
+.rf-rules .principle {
+    border: 3px solid var(--blue-night);
+    background: var(--white);
+    box-shadow: 0.5rem 0.5rem 0 var(--blue-night);
+    color: var(--text);
+}
+
+.rf-rules .principle:hover {
+    transform: translate(-3px, -3px);
+    border-color: var(--blue-night);
+}
+
+.rf-rules .principle__num {
+    color: var(--blue-outline);
+}
+
+.rf-rules .principle h3 {
+    color: var(--blue);
+}
+
+.rf-rules .principle p {
+    color: var(--text);
+}
+
+.rf-rules__note {
+    max-width: 44rem;
+    margin: var(--space-12) auto 0;
+    text-align: center;
+    font-size: var(--text-lead);
+    line-height: var(--lh-body);
+    color: var(--blue);
+}
+
+@media (min-width: 48rem) {
+    .rf-rules .principles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .rf-rules .principle {
+        grid-template-columns: 1fr;
+    }
+
+    .rf-rules .principle__num {
+        grid-row: auto;
+    }
+}
+
+/* ---------- How it works: the button under the steps ---------- */
+
+.rf-how__cta {
+    margin: var(--space-8) 0 0;
+    text-align: center;
+}
+
+/* ---------- Equip (on light) ---------- */
+
+.rf-equip .work-card {
+    height: 100%;
+}
+
+.rf-equip .work-card__media img.is-screen {
+    object-position: 50% 10%;
+}
+
+.rf-equip__icon {
+    display: grid;
+    aspect-ratio: 4 / 3;
+    place-items: center;
+    background: var(--blue);
+    color: var(--yellow);
+}
+
+.rf-equip .work-card__go {
+    color: var(--blue-outline);
+}
+
+.rf-equip__grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+@media (min-width: 48rem) {
+    .rf-equip__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-8);
+    }
+}
+
+.rf-equip__community {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4) var(--space-8);
+    margin-top: var(--space-12);
+    padding: var(--space-6);
+    border: 3px solid var(--blue-night);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: 0.5rem 0.5rem 0 var(--blue-night);
+    color: var(--text);
+}
+
+.rf-equip__community h3 {
+    margin: 0 0 var(--space-1);
+    color: var(--blue);
+}
+
+.rf-equip__community p {
+    margin: 0;
+}
+
+/* ---------- Closing: two paths ---------- */
+
+.rf-close__lead {
+    margin: 0 0 var(--space-2);
+}
+
+/* ---------- Hero: taller and roomier ---------- */
+
+.rf-hero {
+    min-height: clamp(34rem, 88svh, 58rem);
+}
+
+.rf-hero .studio-hero__inner {
+    padding-block: var(--space-24) var(--space-8);
+}
+
+.rf-hero h1 {
+    margin-bottom: var(--space-6);
+}
+
+.rf-hero .studio-hero__lines {
+    margin-bottom: var(--space-8);
+}
+
+.rf-hero .studio-hero__bar {
+    margin-top: var(--space-12);
+}
+
+.rf-copy__title {
+    margin-bottom: var(--space-6);
+}
+
+/* the little list under a headline: three pills */
+.rf-copy__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    max-width: 40rem;
+    margin: 0 0 var(--space-8);
+    padding: 0;
+    list-style: none;
+}
+
+.rf-copy__list li {
+    padding: var(--space-2) var(--space-4);
+    border: 2px solid var(--yellow);
+    border-radius: 999px;
+    background: rgba(11, 23, 52, 0.3);
+    color: var(--white);
+    font-size: 1.0625rem;
+    font-weight: 700;
+}
+
+.rf-copy__sub {
+    margin-bottom: var(--space-8);
+}
+
+@media (min-width: 48rem) {
+    .rf-copy__title {
+        max-width: 16ch;
+    }
+}
+
+/* ---------- Hero composition, as on the live homepage: small gold eyebrow, big tagline, a line, then button + link ---------- */
+
+.rf-hero .studio-hero__eyebrow {
+    margin-bottom: var(--space-4);
+}
+
+.rf-hero .studio-hero__lines {
+    margin: var(--space-6) 0 var(--space-8);
+}
+
+.rf-hero .rf-copy__title {
+    margin-bottom: var(--space-4);
+}
+
+.rf-hero .rf-copy__list,
+.rf-hero .rf-copy__sub {
+    margin-bottom: var(--space-6);
+}
+
+/* ---------- Hero, final: slide headline is the main heading; subline is a plain "a | b | c"; the text link matches "Now showing" ---------- */
+
+.rf-hero .rf-copy__sub {
+    max-width: 40rem;
+    font-size: var(--text-lead);
+}
+
+.rf-copy__link {
+    color: var(--yellow);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.rf-copy__link:hover {
+    text-decoration: underline;
+}
+
+/* subline and text link in the body font (Open Sauce), not the display font the slide inherits */
+.rf-hero .rf-copy__sub,
+.rf-hero .rf-copy__link {
+    font-family: var(--font-body);
+}
+
+/* the text link, bigger again */
+.rf-hero .rf-copy__link {
+    font-size: 1.125rem;
+}
+
+/* ---------- Hero, desktop: the photos fill the right half and dissolve into the blue on their left edge ---------- */
+
+@media (min-width: 48rem) {
+    .rf-hero .studio-hero__slides,
+    .rf-hero .studio-hero__shade {
+        left: auto;
+        width: 55%;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+        mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+    }
+
+    /* the translucent layer stays on top of the photos; change this number to make it more or less see-through */
+    .rf-hero .studio-hero__shade {
+        background: rgba(11, 23, 52, 0.3);
+    }
+}
+
+/* a gentler, longer fade: eased in steps, reaching full photo only at the far right */
+@media (min-width: 48rem) {
+    .rf-hero .studio-hero__slides,
+    .rf-hero .studio-hero__shade {
+        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 15%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85) 82%, #000 100%);
+        mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 15%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85) 82%, #000 100%);
+    }
+}
+
+/* photos a bit wider */
+@media (min-width: 48rem) {
+    .rf-hero .studio-hero__slides,
+    .rf-hero .studio-hero__shade {
+        width: 65%;
+    }
+}
+
+/* slide 1: zoomed in, with the photo's left edge and top kept where they are, so she moves toward the right edge and keeps space above her head */
+@media (min-width: 48rem) {
+    .rf-hero .studio-hero__slide--zoom img {
+        scale: 1.15;
+        transform-origin: 0% 15%;   /* change 1.15 for more or less zoom; the second number moves the anchor up or down */
+    }
+}
+
+/* ---------- Anchors land on the card, below the sticky header ---------- */
+
+.rf-offer,
+.work-card {
+    scroll-margin-top: 6rem;
+}
+
+/* ---------- The text link as a button (slide 3 opens the contact card) ---------- */
+
+button.rf-copy__link {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    text-shadow: inherit;
+}
+
+/* ---------- Contact card ---------- */
+
+.rf-contact {
+    width: min(92vw, 26rem);
+    padding: var(--space-8);
+    border: 3px solid var(--yellow);
+    border-radius: var(--radius-md);
+    background: var(--blue-night);
+    box-shadow: 0.625rem 0.625rem 0 rgba(242, 196, 15, 0.28);
+    color: var(--white);
+}
+
+.rf-contact::backdrop {
+    background: rgba(11, 23, 52, 0.75);
+}
+
+.rf-contact h2 {
+    margin: 0 0 var(--space-3);
+    font-size: 1.75rem;
+}
+
+.rf-contact__copy {
+    margin: 0 0 var(--space-6);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rf-contact__button {
+    display: flex;
+    width: 100%;
+    margin-bottom: var(--space-3);
+    justify-content: center;
+    text-align: center;
+}
+
+.rf-contact__note {
+    margin: var(--space-4) 0 0;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.rf-contact__note a {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.rf-contact__close {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border: 0;
+    background: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* captions with no link keep the same yellow, bold look as the ones with a link */
+.studio-hero__now-label {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+/* desktop: a slightly shorter hero, so the gold strip shows under it without scrolling */
+@media (min-width: 48rem) {
+    .rf-hero {
+        min-height: clamp(30rem, 74svh, 50rem);
+    }
+
+    .rf-hero .studio-hero__inner {
+        padding-block: var(--space-16) var(--space-6);
+    }
+}
+
+/* hero: add back some of the height taken off (a little shorter than the first version, a little taller than the last) */
+@media (min-width: 48rem) {
+    .rf-hero {
+        min-height: clamp(32rem, 82svh, 54rem);
+    }
+
+    .rf-hero .studio-hero__inner {
+        padding-block: 5rem var(--space-6);
+    }
+}
+
+/* About + rules */
+.rf-rules__intro {
+    margin: 0 0 var(--space-6);
+    text-align: center;
+    color: var(--blue);
+    font-size: var(--text-sub);
+}
+
+.rf-rules .principle__proof {
+    grid-column: 2;
+    margin-top: var(--space-2);
+    font-size: 0.9375rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.rf-rules .principle__num {
+    grid-row: span 3;
+}
+
+@media (min-width: 48rem) {
+    .rf-rules .principle__proof {
+        grid-column: auto;
+    }
+
+    .rf-rules .principle__num {
+        grid-row: auto;
+    }
+}
+
+/* closing: "Talk to us" button that looks like the other links */
+.studio-close__talk {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+/* ---------- Projects cards: three equal, smaller cards with more space between them (desktop) ---------- */
+
+@media (min-width: 64rem) {
+    .rf-explore .work-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-12);
+    }
+
+    .rf-explore .work-card--feature {
+        flex-direction: column;
+    }
+
+    .rf-explore .work-card--feature .work-card__media {
+        flex: none;
+        aspect-ratio: 16 / 10;
+        height: auto;
+    }
+
+    .rf-explore .work-card--feature .work-card__media img {
+        position: static;
+        object-position: 50% 20%;
+    }
+
+    .rf-explore .work-card--feature .work-card__body {
+        flex: 1;
+        justify-content: flex-start;
+        padding: var(--space-4) var(--space-6) var(--space-6);
+    }
+
+    .rf-explore .work-card--feature h3 {
+        font-size: 1.25rem;
+    }
+
+    .rf-explore .work-card--feature p {
+        font-size: 0.9375rem;
+    }
+}
+
+/* tablets: a little more space between the cards too */
+@media (min-width: 40rem) and (max-width: 63.999rem) {
+    .rf-explore .work-grid {
+        gap: var(--space-8);
+    }
+}
+
+/* the Buganda card had kept its "span the whole row" rule, which pushed the other two cards onto a second row: put all three on one line */
+@media (min-width: 64rem) {
+    .rf-explore .work-card--feature {
+        grid-column: auto;
+    }
+}
+
+/* ---------- Services cards: start from what the visitor wants ---------- */
+
+.rf-offer__want {
+    margin: 0;
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    line-height: var(--lh-heading);
+}
+
+.rf-offer h3 {
+    font-family: var(--font-label);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.rf-offer__meta {
+    font-size: 0.9375rem;
+}
+
+.rf-offer__meta strong {
+    color: var(--yellow);
+}
+
+.rf-offer__meta a {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.rf-offer__steps {
+    font-size: 0.9375rem;
+    font-style: italic;
+}
+
+.rf-offer__button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.rf-create__more {
+    margin: var(--space-12) 0 0;
+    text-align: center;
+    font-size: var(--text-lead);
+}
+
+.rf-create__link {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--yellow);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.rf-create__link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- About: the story on the left, two real photos on the right ---------- */
+
+.rf-about {
+    display: grid;
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+    align-items: center;
+}
+
+.rf-about__text h2 {
+    margin-bottom: var(--space-4);
+    color: var(--blue);
+}
+
+.rf-about__text .studio-lead {
+    margin-bottom: var(--space-4);
+    color: var(--text);
+}
+
+.rf-about__photos {
+    display: grid;
+    gap: var(--space-4);
+    max-width: 36rem;
+}
+
+.rf-about__photo {
+    margin: 0;
+    overflow: hidden;
+    border: 3px solid var(--blue-night);
+    border-radius: var(--radius-sm);
+    box-shadow: 0.5rem 0.5rem 0 var(--blue-night);
+}
+
+.rf-about__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+    .rf-about__photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 64rem) {
+    .rf-about {
+        grid-template-columns: 1.1fr 1fr;
+        gap: var(--space-16);
+    }
+
+    /* two photos stacked, the second nudged over so they feel casual, not like a grid */
+    .rf-about__photos {
+        grid-template-columns: 1fr;
+    }
+
+    .rf-about__photo:nth-child(2) {
+        margin-left: var(--space-12);
+    }
+}
+
+/* ---------- Services cards: a light card on the blue section, so they stand out ---------- */
+
+.rf-offer {
+    background: var(--off-white);
+    color: var(--text);
+}
+
+.rf-offer__want {
+    color: var(--blue);
+}
+
+.rf-offer h3 {
+    color: var(--blue-outline);
+}
+
+.rf-offer p {
+    color: var(--text);
+}
+
+.rf-offer__meta strong {
+    color: var(--blue-outline);
+}
+
+.rf-offer__meta a {
+    color: var(--blue-outline);
+}
+
+/* the card buttons: blue with gold text, like the closing button, so they read on the light card */
+.rf-offer .rf-offer__button {
+    background: var(--blue);
+    color: var(--yellow);
+}
+
+.rf-offer .rf-offer__button:hover {
+    background: var(--blue-dark);
+}
+
+/* the Services cards use the same light sky-blue as the light sections (not plain white) */
+.rf-offer {
+    background: linear-gradient(rgba(var(--c-tint, 120, 190, 250), 0.40), rgba(var(--c-tint, 120, 190, 250), 0.40)), var(--off-white);
+}
+
+/* ---------- Rotating heading: three lines fade into each other, one at a time ---------- */
+
+.rf-rotate {
+    display: grid;
+    margin-bottom: var(--space-4);
+}
+
+.rf-rotate__item {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: opacity 900ms ease;
+}
+
+.rf-rotate__item.is-active {
+    opacity: 1;
+}
+
+
+/* ---------- About: one photo frame, the pictures fade with the headings ---------- */
+
+.rf-about__frame {
+    display: grid;
+    margin: 0;
+    overflow: hidden;
+    border: 3px solid var(--blue-night);
+    border-radius: var(--radius-sm);
+    box-shadow: 0.5rem 0.5rem 0 var(--blue-night);
+}
+
+.rf-about__pic {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 900ms ease;
+}
+
+.rf-about__pic.is-active {
+    opacity: 1;
+}
+
+@media (min-width: 48rem) {
+    .rf-about__photos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 64rem) {
+    .rf-about__photos {
+        max-width: none;
+    }
+}
+
+/* caption under the photo: changes with the photo */
+.rf-about__captions {
+    display: grid;
+    margin: var(--space-4) 0 0;
+}
+
+.rf-about__caption {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: opacity 900ms ease;
+    color: var(--blue);
+    font-size: var(--text-sm);
+    font-weight: 700;
+}
+
+.rf-about__caption.is-active {
+    opacity: 1;
+}
+
+/* dots under the About photo: choose a photo by hand */
+.rf-about__dots {
+    display: flex;
+    gap: var(--space-1);
+    margin-top: var(--space-1);
+}
+
+.rf-about__dot {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    place-items: center;
+}
+
+.rf-about__dot::before {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    content: "";
+    transition: background 200ms ease, transform 200ms ease;
+}
+
+.rf-about__dot.is-active::before {
+    background: var(--blue);
+    transform: scale(1.25);
+}
+
+.rf-about__dot:focus-visible {
+    outline: 2px solid var(--blue-outline);
+    outline-offset: 2px;
+}
+
+/* ---------- Services cards: the service name is a small tag in the top corner of the photo ---------- */
+
+.rf-offer__media {
+    position: relative;
+}
+
+.rf-offer .rf-offer__tag {
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-4);
+    margin: 0;
+    padding: var(--space-1) var(--space-4);
+    border-radius: 999px;
+    background: var(--yellow);
+    color: var(--blue);
+    font-family: var(--font-label);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Services cards: a darker, solid shadow (was a faint gold one). To remove it, use: box-shadow: none; */
+.rf-offer {
+    box-shadow: 0.625rem 0.625rem 0 var(--blue-night);
+}
+
+/* captions are links now: only the visible one can be clicked or tabbed to */
+.rf-about__caption {
+    visibility: hidden;
+    pointer-events: none;
+    text-decoration: none;
+    transition: opacity 900ms ease, visibility 0s linear 900ms;
+}
+
+.rf-about__caption.is-active {
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 900ms ease, visibility 0s;
+}
+
+.rf-about__caption:hover {
+    text-decoration: underline;
+}
+
+/* centre the caption and the dots under the photo */
+.rf-about__captions {
+    justify-items: center;
+    text-align: center;
+}
+
+.rf-about__dots {
+    justify-content: center;
+}
+
+/* About photo: a bit less tall (3:2 instead of 4:3). Use 16 / 10 for flatter still. */
+.rf-about__pic {
+    aspect-ratio: 3 / 2;
+}
+
+/* ---------- Restored: plain blue hero, no purple glow on this page ---------- */
+
+.rf-hero {
+    background: transparent;
+}
+
+.glow {
+    display: none;
+}
+
+/* ---------- About on a dark background ---------- */
+
+.rf-rules--dark {
+    background: var(--blue-night);
+    color: var(--white);
+}
+
+.rf-rules--dark .eyebrow {
+    color: var(--yellow);
+}
+
+.rf-rules--dark .rf-about__text h2,
+.rf-rules--dark .rf-rules__intro {
+    color: var(--white);
+}
+
+.rf-rules--dark .rf-about__text .studio-lead {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.rf-rules--dark .rf-about__frame {
+    border-color: var(--yellow);
+    box-shadow: 0.5rem 0.5rem 0 rgba(242, 196, 15, 0.28);
+}
+
+.rf-rules--dark .rf-about__caption {
+    color: var(--yellow);
+}
+
+.rf-rules--dark .rf-about__dot::before {
+    border-color: var(--yellow);
+}
+
+.rf-rules--dark .rf-about__dot.is-active::before {
+    background: var(--yellow);
+}
+
+.rf-rules--dark .rf-about__dot:focus-visible {
+    outline-color: var(--white);
+}
+
+.rf-rules--dark .principle {
+    border: 2px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: none;
+    color: var(--white);
+}
+
+.rf-rules--dark .principle:hover {
+    transform: translateX(6px);
+    border-color: var(--yellow);
+}
+
+.rf-rules--dark .principle__num {
+    color: var(--yellow);
+}
+
+.rf-rules--dark .principle h3 {
+    color: var(--white);
+}
+
+.rf-rules--dark .principle p,
+.rf-rules--dark .principle__proof {
+    color: rgba(255, 255, 255, 0.88);
+    opacity: 1;
+}
+
+/* ---------- Closing section: the two links a bit bigger ---------- */
+
+.conversion-cta .studio-close__mail {
+    font-size: 1.25rem;
+}
+
+/* ---------- Colours put back: the hero is the dark navy, About is the page blue ---------- */
+
+.rf-hero {
+    background: var(--blue-night);
+}
+
+.rf-rules--dark {
+    background: transparent;
+}
+
+/* second line under the Services cards */
+.rf-create__more--second {
+    margin-top: var(--space-3);
+}
+
+a.rf-create__link {
+    text-decoration: none;
+}
+
+a.rf-create__link:hover {
+    text-decoration: underline;
+}
+
+/* hero photo overlay: a little lighter (was 0.3; lower again for more photo, raise for darker) */
+@media (min-width: 48rem) {
+    .rf-hero .studio-hero__shade {
+        background: rgba(11, 23, 52, 0.2);
+    }
+}
+
+/* Services: "Talk to us" in white, underlined */
+button.rf-create__link {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* jump links land with the top of the section just under the sticky header (it is 4rem tall) */
+#create,
+#work,
+#about,
+#equip,
+#story {
+    scroll-margin-top: 4rem;
+}
+
+/* ---------- Contact card: the topic line and the copy button ---------- */
+
+.rf-contact__topic {
+    margin: 0 0 var(--space-4);
+    padding: var(--space-2) var(--space-4);
+    border: 2px solid var(--yellow);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+}
+
+.rf-contact__topic strong {
+    color: var(--yellow);
+}
+
+.rf-contact__copybtn {
+    display: block;
+    margin: 0 auto var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border: 0;
+    background: none;
+    color: var(--white);
+    cursor: pointer;
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* the Tools card links are buttons now: look like the links they replace */
+button.work-card__go {
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* ---------- Phones: the photo sits on its own at the top, centred on the subject, and the words sit below it ---------- */
+
+@media (max-width: 63.999rem) {
+    .rf-hero {
+        --rf-photo-h: clamp(15rem, 42svh, 24rem);
+        display: block;
+        min-height: 0;
+    }
+
+    .rf-hero .studio-hero__slides {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: var(--rf-photo-h);
+        -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+    }
+
+    /* a light overlay on the photo only (the words are no longer on top of it) */
+    .rf-hero .studio-hero__shade {
+        inset: 0 0 auto 0;
+        height: var(--rf-photo-h);
+        background: rgba(11, 23, 52, 0.2);
+        -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+    }
+
+    .rf-hero .studio-hero__inner {
+        padding-block: var(--space-4) var(--space-6);
+    }
+
+    /* keep the subject in the middle of the smaller picture */
+    .rf-hero .studio-hero__slide--zoom img {
+        object-position: 46% 25%;
+    }
+
+    .rf-hero .studio-hero__slide img {
+        object-position: 50% 40%;
+    }
+
+    .rf-hero .studio-hero__slide--enju img {
+        object-position: 56% 30%;
+    }
+}
+
+/* (more specific, so the per-photo centring wins over the general one above) */
+@media (max-width: 63.999rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        object-position: 46% 25%;
+    }
+
+    .rf-hero .studio-hero__slide.studio-hero__slide--enju img {
+        object-position: 56% 30%;
+    }
+}
+
+/* ---------- About, where it stacks (phones and tablets): eyebrow, then the slideshow, then the heading and text ---------- */
+
+@media (max-width: 63.999rem) {
+    .rf-about {
+        gap: var(--space-4);
+    }
+
+    /* the text block steps aside so its pieces can be ordered around the photos */
+    .rf-about__text {
+        display: contents;
+    }
+
+    .rf-about__text .eyebrow {
+        order: 0;
+        margin-bottom: 0;
+    }
+
+    .rf-about__photos {
+        order: 1;
+        margin-bottom: var(--space-4);
+    }
+
+    .rf-about__text .rf-rotate {
+        order: 2;
+    }
+
+    .rf-about__text .studio-lead {
+        order: 3;
+    }
+}
+
+/* the WhatsApp group button: WhatsApp green, so it stands out from the white card around it */
+.rf-whatsapp {
+    background: #138a43;
+    color: var(--white);
+}
+
+.rf-whatsapp:hover {
+    background: #0f7338;
+}
+
+/* the WhatsApp group button: the page blue, like the section below it */
+.rf-whatsapp {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.rf-whatsapp:hover {
+    background: var(--blue-dark);
+}
+
+.rf-whatsapp {
+    color: var(--yellow);
+}
+
+/* ---------- Services cards: more room around them ---------- */
+
+@media (min-width: 64rem) {
+    .rf-offers {
+        gap: var(--space-12);
+    }
+
+    .rf-offer__body {
+        gap: var(--space-4);
+        padding: var(--space-6) var(--space-8) var(--space-8);
+    }
+
+    .rf-offer__want {
+        font-size: 1.25rem;
+    }
+}
+
+/* tablets: one card at a time, instead of three squeezed side by side */
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+    .rf-offers {
+        grid-template-columns: 1fr;
+        max-width: 34rem;
+        margin-inline: auto;
+        gap: var(--space-8);
+    }
+}
+
+/* small hint under the photo band heading */
+.rf-band__hint {
+    margin: 0;
+    font-size: var(--text-base);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* the hint now sits under the photo band */
+.rf-band__hint--below {
+    margin-top: calc(var(--space-6) * -1);
+    padding-bottom: var(--space-12);
+    text-align: center;
+}
+
+/* stacked hero (phones and tablets): the desktop-only settings are switched off */
+@media (max-width: 63.999rem) {
+    .rf-hero .studio-hero__shade {
+        left: 0;
+        width: 100%;
+    }
+
+    .rf-hero .studio-hero__slide--zoom img {
+        scale: 1;
+    }
+}
+
+/* tablets: the three Tools cards stack one at a time too, instead of three squeezed side by side */
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+    .rf-equip__grid {
+        grid-template-columns: 1fr;
+        max-width: 34rem;
+        margin-inline: auto;
+        gap: var(--space-8);
+    }
+}
+
+/* ---------- Tablet hero crops ---------- */
+
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+    /* slide 1: zoomed in a little on the woman, so the faces of the people on the left and right fall outside the picture */
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.3;
+        transform-origin: 46% 30%;
+    }
+
+    /* slide 2: the palace sits a bit lower in the picture (more of the top shows; a smaller second number moves it lower) */
+    .rf-hero .studio-hero__slide:nth-child(2) img {
+        object-position: 50% 15%;
+    }
+}
+
+/* tablet, adjusted after a look: slide 1 zoomed a bit more (so the faces at the left and right edges are out), palace at the very top of its picture */
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.55;
+        transform-origin: 48% 20%;
+    }
+
+    .rf-hero .studio-hero__slide:nth-child(2) img {
+        object-position: 50% 0%;
+    }
+}
+
+/* tablet slide 1, fine-tuned: a little less zoom, anchored so the people at both edges still fall out of the picture */
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+    .rf-hero .studio-hero__slide.studio-hero__slide--zoom img {
+        scale: 1.45;
+        transform-origin: 54% 20%;
+    }
+}

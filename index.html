@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ugaverse Studios is a Ugandan creative technology studio. We make virtual tours, 360° films and interactive experiences that bring Ugandan stories to the world.">
-    <meta property="og:title" content="Ugaverse Studios | Immersive storytelling, made in Uganda">
-    <meta property="og:description" content="Virtual tours, 360° films and interactive experiences that bring Ugandan stories to the world, designed and developed by Ugandans.">
-    <meta property="og:type" content="website">
+    <meta name="description" content="Ugaverse Studios is your one-stop immersive shop in Uganda: online tours, VR projects, 360° video and exhibitions, plus XR equipment hire, web development and XR workshops.">
+    <meta property="og:title" content="Ugaverse Studios | Your one-stop immersive shop, made in Uganda">
+    <meta property="og:description" content="Online tours, VR projects, 360° video and exhibitions made in Uganda, plus XR equipment hire, web development and XR workshops.">
     <link rel="canonical" href="https://www.ugaverse.com/">
     <meta property="og:url" content="https://www.ugaverse.com/">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ugaverse Studios">
     <meta property="og:image" content="https://www.ugaverse.com/images/homepage/Thumbnail_DaddysAirbnb.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.ugaverse.com/images/homepage/Thumbnail_DaddysAirbnb.jpg">
-    <meta name="twitter:title" content="Ugaverse Studios | Immersive storytelling, made in Uganda">
-    <meta name="twitter:description" content="Virtual tours, 360° films and interactive experiences that bring Ugandan stories to the world.">
-    <title>Ugaverse Studios | Immersive storytelling, made in Uganda</title>
+    <meta name="twitter:title" content="Ugaverse Studios | Your one-stop immersive shop, made in Uganda">
+    <meta name="twitter:description" content="Online tours, VR projects, 360° video and exhibitions made in Uganda, plus XR equipment hire, web development and XR workshops.">
+    <title>Ugaverse Studios | Your one-stop immersive shop, made in Uganda</title>
     <link rel="icon" type="image/png" href="icons/favicon_7Oct2026.png">
     <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48_7Oct2026.png">
     <link rel="apple-touch-icon" href="icons/favicon-apple_7Oct2026.png">
@@ -26,12 +26,15 @@
     </script>
     <link rel="stylesheet" href="css/style-system.css?v=20261113k">
     <link rel="stylesheet" href="css/studio.css?v=20261113p">
+    <link rel="stylesheet" href="css/refresh.css?v=20261126z">
     <script src="js/site.js?v=20261113k" defer></script>
     <script src="js/reveal-system.js?v=20261113k" defer></script>
     <script src="js/strip-system.js?v=20261113k" defer></script>
     <script src="js/photo-band.js?v=20261113k" defer></script>
     <script src="js/copy-email.js?v=20261113k" defer></script>
-    <script src="js/studio.js?v=20261113p" defer></script>
+    <script src="js/studio.js?v=20261126c" defer></script>
+    <script src="js/contact-card.js?v=20261126b" defer></script>
+    <script src="js/rotate.js?v=20261126d" defer></script>
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -53,17 +56,31 @@
             <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
                 <ul class="site-nav__list">
                     <li class="site-nav__item site-nav__item--sub">
-                        <a href="#work" aria-haspopup="true">Our work</a>
-                        <ul class="site-nav__sub" aria-label="Our work">
+                        <a href="#work" aria-haspopup="true">Projects</a>
+                        <ul class="site-nav__sub" aria-label="Projects">
                             <li><a href="projects/buganda-palace-tour/">The Buganda Palace</a></li>
                             <li><a href="projects/timeless-frames/">Timeless Frames</a></li>
                             <li><a href="daddys-house.html">Daddy's House</a></li>
                         </ul>
                     </li>
-                    <li><a href="#how">How we work</a></li>
-                    <li><a href="#vr-corner">VR Corner</a></li>
+                    <li class="site-nav__item site-nav__item--sub">
+                        <a href="#create" aria-haspopup="true">Services</a>
+                        <ul class="site-nav__sub" aria-label="Services">
+                            <li><a href="#tours">Online tours</a></li>
+                            <li><a href="#interactive">Interactive experiences</a></li>
+                            <li><a href="#events">VR for events</a></li>
+                        </ul>
+                    </li>
+                    <li class="site-nav__item site-nav__item--sub">
+                        <a href="#equip" aria-haspopup="true">Tools</a>
+                        <ul class="site-nav__sub" aria-label="Tools">
+                            <li><a href="#hire">XR equipment hire</a></li>
+                            <li><a href="#web">Web development</a></li>
+                            <li><a href="#workshops">XR training</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#about">About</a></li>
-                    <li><a class="site-nav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Tell us your story <span class="site-nav__arrow" aria-hidden="true">&rarr;</span></a></li>
+                    <li><a class="site-nav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Start a project <span class="site-nav__arrow" aria-hidden="true">&rarr;</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -71,44 +88,47 @@
 
     <main id="main-content">
 
-        <!-- 1. Hero: the photo, the headline and the dots change together -->
-        <section class="studio-hero" id="top" data-studio-hero aria-label="Ugaverse Studios">
+        <!-- 1. Hero: three slides (shop, Ugandan experiences, tools). The tagline stays put; the photo, headline, line, button and dots change together. -->
+        <section class="studio-hero rf-hero" id="top" data-studio-hero aria-label="Ugaverse Studios">
             <div class="studio-hero__slides" aria-hidden="true">
-                <div class="studio-hero__slide is-active" data-label="The Buganda Palace tour" data-href="projects/buganda-palace-tour/">
-                    <img src="projects/buganda-palace-tour/images/slide-1.webp" width="1600" height="1200" alt="" fetchpriority="high">
+                <div class="studio-hero__slide studio-hero__slide--zoom is-active" data-label="A guest trying VR at an event" data-href="">
+                    <img src="images/web/hero-vr-event.jpg" width="1800" height="1013" alt="" fetchpriority="high">
                 </div>
-                <div class="studio-hero__slide" data-label="Timeless Frames" data-href="projects/timeless-frames/">
-                    <img src="projects/timeless-frames/images/poster.webp" width="1553" height="797" alt="" loading="lazy">
+                <div class="studio-hero__slide" data-label="The Buganda Palace tour" data-href="#work">
+                    <img src="projects/buganda-palace-tour/images/slide-1.webp" width="1600" height="1200" alt="" loading="lazy">
                 </div>
-                <div class="studio-hero__slide" data-label="The Enju Heritage launch" data-href="projects/buganda-palace-tour/">
+                <div class="studio-hero__slide studio-hero__slide--enju" data-label="VR headsets you can hire" data-href="">
                     <img src="images/web/enju-launch-full.webp" width="1800" height="1200" alt="" loading="lazy">
-                </div>
-                <div class="studio-hero__slide" data-label="Daddy's House" data-href="daddys-house.html">
-                    <img src="images/web/dh-1.webp" width="1000" height="751" alt="" loading="lazy">
                 </div>
             </div>
             <div class="studio-hero__shade" aria-hidden="true"></div>
 
             <div class="container studio-hero__inner">
                 <p class="eyebrow studio-hero__eyebrow reveal">Ugaverse Studios</p>
-                <h1 class="reveal" style="--d: 80ms">Immersive storytelling, made in Uganda.</h1>
-                <div class="studio-hero__lines reveal" style="--d: 160ms" aria-live="off">
-                    <p class="studio-hero__line is-active">Walk through the Buganda Palace.</p>
-                    <p class="studio-hero__line">Step into a virtual exhibition.</p>
-                    <p class="studio-hero__line">Book a VR setup for your event.</p>
-                    <p class="studio-hero__line">Visit a home before you arrive.</p>
-                </div>
-                <div class="studio-hero__actions reveal" style="--d: 240ms">
-                    <a class="button button--yellow button--large" href="#work">See our work</a>
-                    <a class="hero__link" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">What's your story? <span aria-hidden="true">&rarr;</span></a>
+                <h1 class="sr-only">Ugaverse Studios</h1>
+                <div class="studio-hero__lines reveal" style="--d: 120ms">
+                    <div class="studio-hero__line rf-copy is-active">
+                        <p class="rf-copy__title">Your one-stop immersive shop.</p>
+                        <p class="rf-copy__sub">VR projects | 360 video | Exhibitions</p>
+                        <div class="studio-hero__actions"><a class="button button--yellow button--large" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Start a project</a><a class="rf-copy__link" href="#work">What we make <span aria-hidden="true">&rarr;</span></a></div>
+                    </div>
+                    <div class="studio-hero__line rf-copy">
+                        <p class="rf-copy__title">A world of Ugandan experiences.</p>
+                        <p class="rf-copy__sub">Online tours of spaces and events.</p>
+                        <div class="studio-hero__actions"><a class="button button--yellow button--large" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Start a project</a><a class="rf-copy__link" href="#work">Take a tour <span aria-hidden="true">&rarr;</span></a></div>
+                    </div>
+                    <div class="studio-hero__line rf-copy">
+                        <p class="rf-copy__title">All the tools you need.</p>
+                        <p class="rf-copy__sub">XR equipment | Web development | XR training</p>
+                        <div class="studio-hero__actions"><a class="button button--yellow button--large" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Start a project</a><button class="rf-copy__link" type="button" data-contact-open>Talk to us <span aria-hidden="true">&rarr;</span></button></div>
+                    </div>
                 </div>
                 <div class="studio-hero__bar">
-                    <p class="studio-hero__now" data-hero-now>Now showing: <a href="projects/buganda-palace-tour/">The Buganda Palace tour &rarr;</a></p>
+                    <p class="studio-hero__now" data-hero-now>Now showing: <span class="studio-hero__now-label">A guest trying VR at an event</span></p>
                     <div class="studio-hero__controls" role="group" aria-label="Slideshow controls">
-                        <button class="studio-hero__dot is-active" type="button" aria-label="Show slide 1: Buganda Palace" aria-current="true"></button>
-                        <button class="studio-hero__dot" type="button" aria-label="Show slide 2: Timeless Frames" aria-current="false"></button>
-                        <button class="studio-hero__dot" type="button" aria-label="Show slide 3: VR Corner" aria-current="false"></button>
-                        <button class="studio-hero__dot" type="button" aria-label="Show slide 4: Daddy's House" aria-current="false"></button>
+                        <button class="studio-hero__dot is-active" type="button" aria-label="Show slide 1: Immersive shop" aria-current="true"></button>
+                        <button class="studio-hero__dot" type="button" aria-label="Show slide 2: Ugandan experiences" aria-current="false"></button>
+                        <button class="studio-hero__dot" type="button" aria-label="Show slide 3: Tools" aria-current="false"></button>
                         <button class="studio-hero__pause" type="button" aria-label="Pause the slideshow" aria-pressed="false">
                             <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
                             <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -118,55 +138,76 @@
             </div>
         </section>
 
-        <div class="strip" aria-label="What we make">
+        <div class="strip" aria-label="What Ugaverse is">
             <div class="strip__track">
-                <ul class="strip__list"><li>Virtual tours</li><li>360° films</li><li>Interactive experiences</li><li>VR Corner</li><li>Made in Uganda</li></ul>
-                <ul class="strip__list" aria-hidden="true"><li>Virtual tours</li><li>360° films</li><li>Interactive experiences</li><li>VR Corner</li><li>Made in Uganda</li></ul>
+                <ul class="strip__list"><li>Virtual tours</li><li>360&deg; video</li><li>VR events</li><li>XR equipment hire</li><li>Web development</li><li>XR workshops</li><li>Made in Uganda</li></ul>
+                <ul class="strip__list" aria-hidden="true"><li>Virtual tours</li><li>360&deg; video</li><li>VR events</li><li>XR equipment hire</li><li>Web development</li><li>XR workshops</li><li>Made in Uganda</li></ul>
             </div>
         </div>
 
-        <!-- 2. Who we are, on the blue with the glow -->
-        <section class="section studio-intro" id="about">
-            <div class="container studio-intro__grid">
-                <div class="reveal">
-                    <p class="eyebrow">Ugaverse - a creative studio</p>
-                    <!-- shown only where the section stacks (phones and tablets); on desktop the rule cards sit beside the text instead -->
-                    <figure class="studio-intro__photo">
-                        <img src="projects/buganda-palace-tour/images/story-3.webp" width="1600" height="1200" alt="A group watching a man explain the colourful paintings that cover the walls of a thatched hut" loading="lazy">
-                    </figure>
-                    <h2>We bring Ugandan stories to the world, the way they are meant to be told.</h2>
-                    <ul class="studio-intro__list">
-                        <li>Virtual tours</li>
-                        <li>360° films/video</li>
-                        <li>Interactive simulations</li>
-                    </ul>
-                    <p class="studio-intro__copy">Designed and developed by Ugandans, from idea to experience.</p>
-                </div>
-                <div class="reveal" style="--d: 120ms">
-                    <h3 class="principles__intro">Our work is defined by 3 rules.</h3>
-                    <ol class="principles">
-                        <li class="principle"><span class="principle__num" aria-hidden="true">01</span><h3>Context</h3><p>It must be tailored to the local context.</p></li>
-                        <li class="principle"><span class="principle__num" aria-hidden="true">02</span><h3>Quality</h3><p>It must be the best quality we can make.</p></li>
-                        <li class="principle"><span class="principle__num" aria-hidden="true">03</span><h3>Accessibility</h3><p>It must be easy for people to open and use.</p></li>
-                    </ol>
-                </div>
+        <!-- 4. Services, on the blue: starts from what the visitor wants -->
+        <section class="section rf-create" id="create">
+            <div class="container">
+                <header class="studio-head reveal">
+                    <p class="eyebrow">Services</p>
+                    <h2>What do you want to create?</h2>
+                    <p class="studio-lead">Pick what is closest to your idea.</p>
+                </header>
+
+                <ul class="rf-offers" role="list">
+                    <li class="reveal">
+                        <article class="rf-offer" id="tours">
+                            <figure class="rf-offer__media"><img src="images/web/dh-4.webp" width="640" height="480" alt="A look around Daddy's House, a creative homestay in Naalya" loading="lazy"><h3 class="rf-offer__tag">Online tour</h3></figure>
+                            <div class="rf-offer__body">
+                                <p class="rf-offer__want">I want people to visit my place online.</p>
+                                <p>A tour people open on a phone, tablet or computer.</p>
+                                <p class="rf-offer__meta"><strong>Example:</strong> <a href="daddys-house.html">Daddy's House</a></p>
+                                <button class="button button--primary rf-offer__button" type="button" data-contact-open data-contact-topic="an online tour" data-contact-mailto="mailto:hello@ugaverse.com?subject=Online%20tour&amp;body=Hello%20Ugaverse%2C%0D%0A%0D%0AI%27d%20like%20to%20ask%20about%20an%20online%20tour.%0D%0A%0D%0AMy%20place%3A%0D%0AWhere%20it%20is%3A%0D%0AAnything%20else%3A%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20phone%20or%20WhatsApp%3A" aria-label="Ask about online tours">Ask about it</button>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="reveal" style="--d: 100ms">
+                        <article class="rf-offer" id="interactive">
+                            <figure class="rf-offer__media"><img src="projects/buganda-palace-tour/images/slide-1.webp" width="1600" height="1200" alt="The Buganda Palace, from the interactive tour" loading="lazy"><h3 class="rf-offer__tag">Interactive experience</h3></figure>
+                            <div class="rf-offer__body">
+                                <p class="rf-offer__want">I want to bring people into a story or a place.</p>
+                                <p>A place or story people can walk through and explore.</p>
+                                <p class="rf-offer__meta"><strong>Example:</strong> <a href="projects/buganda-palace-tour/">The Buganda Palace</a></p>
+                                <button class="button button--primary rf-offer__button" type="button" data-contact-open data-contact-topic="an interactive experience" data-contact-mailto="mailto:hello@ugaverse.com?subject=Interactive%20experience&amp;body=Hello%20Ugaverse%2C%0D%0A%0D%0AI%27d%20like%20to%20ask%20about%20an%20interactive%20experience.%0D%0A%0D%0AMy%20story%20or%20place%3A%0D%0AAnything%20else%3A%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20phone%20or%20WhatsApp%3A" aria-label="Ask about interactive experiences">Ask about it</button>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="reveal" style="--d: 200ms">
+                        <article class="rf-offer" id="events">
+                            <figure class="rf-offer__media"><img src="images/web/timeless-frames-vr.webp" width="840" height="560" alt="A guest being fitted with a VR headset in front of the Timeless Frames banner" loading="lazy"><h3 class="rf-offer__tag">VR for events</h3></figure>
+                            <div class="rf-offer__body">
+                                <p class="rf-offer__want">I want a VR setup at my event.</p>
+                                <p>Headsets at your event, with your own branding.</p>
+                                <p class="rf-offer__meta"><strong>Example:</strong> <a href="projects/timeless-frames/">Timeless Frames</a></p>
+                                <button class="button button--primary rf-offer__button" type="button" data-contact-open data-contact-topic="VR for my event" data-contact-mailto="mailto:hello@ugaverse.com?subject=VR%20for%20my%20event&amp;body=Hello%20Ugaverse%2C%0D%0A%0D%0AI%27d%20like%20to%20ask%20about%20VR%20for%20my%20event.%0D%0A%0D%0AMy%20event%3A%0D%0ADate%3A%0D%0APlace%3A%0D%0ANumber%20of%20people%3A%0D%0AAnything%20else%3A%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20phone%20or%20WhatsApp%3A" aria-label="Ask about VR for events">Ask about it</button>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <p class="rf-create__more reveal">Not sure yet? <a class="rf-create__link" href="#work">See our work <span aria-hidden="true">&darr;</span></a></p>
             </div>
         </section>
 
-        <!-- 3. The work, large -->
-        <section class="section section--light" id="work">
+        <!-- 3. Explore -->
+        <section class="section section--light rf-explore" id="work">
             <div class="container">
                 <header class="studio-head reveal">
-                    <p class="eyebrow">Projects we've built</p>
-                    <h2>Don't just read about it. See for yourself.</h2>
-                    <p class="studio-lead">Open these experiences and discover the stories behind them.</p>
+                    <p class="eyebrow">Projects</p>
+                    <h2>A world of Ugandan experiences.</h2>
+                    <p class="studio-lead">Choose one and look around.</p>
                 </header>
 
                 <div class="work-grid">
                     <a class="work-card work-card--feature reveal" href="projects/buganda-palace-tour/">
                         <figure class="work-card__media">
                             <img src="projects/buganda-palace-tour/images/buganda-palace-poster.webp" width="1800" height="1170" alt="The white palace tower and steps on a sunny day, from the Buganda Palace tour" loading="lazy">
-                            <span class="work-card__tag">Interactive tour</span>
+                            <span class="work-card__tag">Heritage &middot; Interactive tour</span>
                         </figure>
                         <div class="work-card__body">
                             <h3>The Buganda Palace</h3>
@@ -178,7 +219,7 @@
                     <a class="work-card reveal" style="--d: 80ms" href="projects/timeless-frames/">
                         <figure class="work-card__media">
                             <img src="projects/timeless-frames/images/slide-1.webp" width="1040" height="780" alt="A virtual gallery hallway with framed wildlife photographs and Timeless Frames banners" loading="lazy">
-                            <span class="work-card__tag">Virtual exhibition</span>
+                            <span class="work-card__tag">Exhibition &middot; Virtual gallery</span>
                         </figure>
                         <div class="work-card__body">
                             <h3>Timeless Frames</h3>
@@ -190,24 +231,12 @@
                     <a class="work-card reveal" style="--d: 160ms" href="daddys-house.html">
                         <figure class="work-card__media">
                             <img src="images/web/dh-4.webp" width="640" height="480" alt="A look around Daddy's House, a creative homestay in Naalya" loading="lazy">
-                            <span class="work-card__tag">360° home tour</span>
+                            <span class="work-card__tag">Hospitality &middot; 360&deg; home tour</span>
                         </figure>
                         <div class="work-card__body">
                             <h3>Daddy's House</h3>
                             <p>A creative homestay in Naalya, with a tour you can take before you book.</p>
                             <span class="work-card__go">Look around <span aria-hidden="true">&rarr;</span></span>
-                        </div>
-                    </a>
-
-                    <a class="work-card reveal" style="--d: 240ms" href="https://drive.google.com/drive/folders/10e5v0d-2mGNwl4I7wUnpUDY4Q0JvWCBr" target="_blank" rel="noopener noreferrer">
-                        <figure class="work-card__media">
-                            <img src="images/web/keepers-vr.webp" width="840" height="560" alt="A guest in a VR headset reaching out with hand controllers while a guide helps, at the Keepers VR experience" loading="lazy">
-                            <span class="work-card__tag">VR app</span>
-                        </figure>
-                        <div class="work-card__body">
-                            <h3>Enju VR</h3>
-                            <p>The headset version, shown to guests at the Enju Heritage launch in November 2023.</p>
-                            <span class="work-card__go">Download the app <span aria-hidden="true">&rarr;</span></span>
                         </div>
                     </a>
                 </div>
@@ -229,83 +258,102 @@
             </div>
         </section>
 
-        <!-- 4. From idea to finished experience, on the blue with the glow -->
-        <section class="section journey" id="how">
+        <!-- 5. About + the three rules, on light -->
+        <section class="section rf-rules rf-rules--dark" id="about">
             <div class="container">
-                <header class="studio-head studio-head--center reveal">
-                    <p class="eyebrow">How we work</p>
-                    <h2>The process works in 3 simple steps.</h2>
-                </header>
-                <ol class="journey__steps">
-                    <li class="journey__step reveal">
-                        <figure class="journey__media">
-                            <img src="projects/buganda-palace-tour/images/process-3.webp" width="1600" height="1200" alt="Three people measuring the edge of a paved driveway with a yellow tape measure, in front of the white palace building" loading="lazy">
-                            <span class="journey__num" aria-hidden="true">1</span>
+                <div class="rf-about reveal" data-rotate-scope>
+                    <div class="rf-about__text">
+                        <p class="eyebrow">About Ugaverse</p>
+                        <h2 class="rf-rotate" data-rotate>
+                            <span class="rf-rotate__item is-active">Experience heritage.</span>
+                            <span class="rf-rotate__item">Visit new places.</span>
+                            <span class="rf-rotate__item">Discover art &amp; culture.</span>
+                        </h2>
+                        <p class="studio-lead">We started Ugaverse to help people explore Ugandan places and stories from wherever they are.</p>
+                        <p class="studio-lead">Today, we build immersive projects for businesses and organisations, while finding new ways to share the best of Uganda with the world.</p>
+                    </div>
+                    <div class="rf-about__photos">
+                        <figure class="rf-about__frame">
+                            <img class="rf-about__pic is-active" src="projects/buganda-palace-tour/images/story-3.webp" width="1600" height="1200" alt="A group watching a man explain the colourful paintings that cover the walls of a thatched hut" loading="lazy">
+                            <img class="rf-about__pic" src="images/web/dh-4.webp" width="640" height="480" alt="A look around Daddy's House, a creative homestay in Naalya" loading="lazy">
+                            <img class="rf-about__pic" src="projects/timeless-frames/images/slide-1.webp" width="1040" height="780" alt="A virtual gallery hallway with framed wildlife photographs and Timeless Frames banners" loading="lazy">
                         </figure>
-                        <div class="journey__body"><h3>Visit</h3><p>We visit the place, then measure and scan it.</p></div>
-                    </li>
-                    <li class="journey__step reveal" style="--d: 100ms">
-                        <figure class="journey__media">
-                            <img src="projects/buganda-palace-tour/images/process-4.webp" width="1600" height="1200" alt="A laptop screen showing a 3D model of the palace and its driveway in a game-building program" loading="lazy">
-                            <span class="journey__num" aria-hidden="true">2</span>
-                        </figure>
-                        <div class="journey__body"><h3>Build</h3><p>We turn it into a 3D model and build the experience.</p></div>
-                    </li>
-                    <li class="journey__step reveal" style="--d: 200ms">
-                        <figure class="journey__media">
-                            <img src="projects/buganda-palace-tour/images/process-5.webp" width="1600" height="1200" alt="A man in a white T-shirt and a woman wearing a VR headset, both seen from behind, at an exhibition stand" loading="lazy">
-                            <span class="journey__num" aria-hidden="true">3</span>
-                        </figure>
-                        <div class="journey__body"><h3>Share</h3><p>We launch it online, or bring it to your event on a headset.</p></div>
-                    </li>
+                        <p class="rf-about__captions">                            <a class="rf-about__caption is-active" href="projects/buganda-palace-tour/">From our Buganda Palace project. <span aria-hidden="true">&rarr;</span></a>                            <a class="rf-about__caption" href="daddys-house.html">Daddy's House, a creative homestay in Naalya. <span aria-hidden="true">&rarr;</span></a>                            <a class="rf-about__caption" href="projects/timeless-frames/">Timeless Frames, a virtual photo exhibition. <span aria-hidden="true">&rarr;</span></a>                        </p>
+                        <div class="rf-about__dots" role="group" aria-label="Choose a photo">                            <button class="rf-about__dot is-active" type="button" aria-label="Show: Experience heritage" aria-current="true"></button>                            <button class="rf-about__dot" type="button" aria-label="Show: Visit new places" aria-current="false"></button>                            <button class="rf-about__dot" type="button" aria-label="Show: Discover art and culture" aria-current="false"></button>                        </div>
+                    </div>
+                </div>
+                <h3 class="rf-rules__intro reveal">Our work is defined by 3 rules.</h3>
+                <ol class="principles reveal">
+                    <li class="principle"><span class="principle__num" aria-hidden="true">01</span><h3>Context</h3><p>It must be tailored to the local context.</p><p class="principle__proof">Our Buganda Palace tour comes from a real visit to the palace in Kampala.</p></li>
+                    <li class="principle"><span class="principle__num" aria-hidden="true">02</span><h3>Quality</h3><p>It must be the best quality we can make.</p><p class="principle__proof">We visit, measure and scan each place, then build it as a 3D model.</p></li>
+                    <li class="principle"><span class="principle__num" aria-hidden="true">03</span><h3>Accessibility</h3><p>It must be easy for people to open and use.</p><p class="principle__proof">The Buganda Palace tour opens on a phone, tablet or computer.</p></li>
                 </ol>
-                <p class="journey__note reveal">Photos from the Buganda Palace project. <a href="projects/buganda-palace-tour/">See the project <span aria-hidden="true">&rarr;</span></a></p>
             </div>
         </section>
 
-        <div class="strip" aria-label="Who we make experiences for">
-            <div class="strip__track">
-                <ul class="strip__list"><li>Museums and heritage</li><li>Tourism</li><li>Schools</li><li>Brands</li><li>Event organisers</li></ul>
-                <ul class="strip__list" aria-hidden="true"><li>Museums and heritage</li><li>Tourism</li><li>Schools</li><li>Brands</li><li>Event organisers</li></ul>
-            </div>
-        </div>
+        <!-- 7. Equip, on light. Three things we provide besides finished experiences. -->
+        <section class="section section--light rf-equip" id="equip">
+            <div class="container">
+                <header class="studio-head reveal">
+                    <p class="eyebrow">Tools</p>
+                    <h2>All the tools you need.</h2>
+                    <p class="studio-lead">Hire our VR kit, put your experience online, or learn with VR.</p>
+                </header>
 
-        <!-- 5. VR Corner. The badge is a placeholder until there is a real VR Corner logo. -->
-        <section class="section vrc" id="vr-corner">
-            <div class="container vrc__grid">
-                <div class="reveal">
-                    <span class="vrc__badge"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-3.2l-1.6-2.5h-4.4L8.2 16.5H5a2 2 0 0 1-2-2z"/></svg>VR Corner</span>
-                    <!-- the same photos again, shown only where the section stacks (phones and tablets): they sit just under the badge there, and in the right-hand column on desktop -->
-                    <div class="vrc__photos vrc__photos--stack">
-                        <figure class="vrc__photo vrc__photo--lead"><img src="images/web/enju-launch.webp" width="840" height="560" alt="A man using a VR headset and hand controllers at the Enju Heritage launch" loading="lazy"></figure>
-                        <figure class="vrc__photo"><img src="images/web/keepers-vr.webp" width="840" height="560" alt="A guide helping a guest in a VR headset at the Keepers VR experience" loading="lazy"></figure>
-                        <figure class="vrc__photo"><img src="images/web/timeless-frames-vr.webp" width="840" height="560" alt="A guest being fitted with a VR headset in front of the Timeless Frames banner" loading="lazy"></figure>
-                    </div>
-                    <h2>Share your stories in person.</h2>
-                    <p class="vrc__copy">Bring your audience into your world with branded VR setups at your next event.</p>
-                    <ul class="vrc__uses" aria-label="VR Corner is for">
-                        <li>Events</li><li>Exhibitions</li><li>Workshops</li><li>Schools</li><li>Training</li>
-                    </ul>
-                    <p class="vrc__how">Tell us about your event via email.</p>
-                    <div class="vrc__actions">
-                        <a class="button button--yellow button--large" href="mailto:hello@ugaverse.com?subject=VR%20Corner%20for%20my%20event&amp;body=Hello%20Ugaverse%2C%0D%0A%0D%0AI%27d%20like%20to%20know%20more%20about%20VR%20Corner.%0D%0A%0D%0AMy%20event%3A%0D%0ANumber%20of%20people%3A%0D%0ADate%3A%0D%0APlace%3A%0D%0AAnything%20else%3A%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20phone%20or%20WhatsApp%3A">Email us</a>
-                        <p class="vrc__mail">or write to <a href="mailto:hello@ugaverse.com">hello@ugaverse.com</a></p>
-                    </div>
+                <div class="rf-equip__grid">
+                    <article class="work-card reveal" id="hire">
+                        <figure class="work-card__media">
+                            <img src="images/web/enju-launch.webp" width="840" height="560" alt="A man using a VR headset and hand controllers at the Enju Heritage launch, in front of a banner that reads Build with us" loading="lazy">
+                            <span class="work-card__tag">Hire</span>
+                        </figure>
+                        <div class="work-card__body">
+                            <h3>XR equipment</h3>
+                            <p>Hire VR headsets for your event, with attendants and a screen if you need one.</p>
+                            <button class="work-card__go" type="button" data-contact-open data-contact-topic="XR equipment hire" data-contact-mailto="mailto:hello@ugaverse.com?subject=XR%20equipment%20hire&amp;body=Hello%20Ugaverse%2C%0D%0A%0D%0AI%27d%20like%20to%20hire%20XR%20equipment.%0D%0A%0D%0AMy%20event%3A%0D%0ADate%3A%0D%0APlace%3A%0D%0ANumber%20of%20headsets%3A%0D%0ADo%20I%20need%20a%20screen%3F%3A%0D%0ADo%20I%20need%20an%20attendant%3F%3A%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20phone%20or%20WhatsApp%3A">Book equipment <span aria-hidden="true">&rarr;</span></button>
+                        </div>
+                    </article>
+
+                    <a class="work-card reveal" id="web" style="--d: 100ms" href="daddys-house.html">
+                        <figure class="work-card__media">
+                            <img src="images/web/daddys-house-site.jpg" width="857" height="537" alt="The Daddy's House website, showing a bedroom photo with the nightly rate and the location, Naalya, Kampala" loading="lazy">
+                            <span class="work-card__tag">Build</span>
+                        </figure>
+                        <div class="work-card__body">
+                            <h3>Web development</h3>
+                            <p>A digital home with a tour, and a shareable link.</p>
+                            <span class="work-card__go">See an example <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+
+                    <article class="work-card reveal" id="workshops" style="--d: 200ms">
+                        <figure class="work-card__media">
+                            <img src="images/web/keepers-vr.webp" width="840" height="560" alt="A woman holding a phone guides a man in a VR headset as he reaches out with the hand controllers, at the Keepers VR experience" loading="lazy">
+                            <span class="work-card__tag">Learn</span>
+                        </figure>
+                        <div class="work-card__body">
+                            <h3>XR training</h3>
+                            <p>Short, practical sessions for people to learn with VR. We show up and set up.</p>
+                            <button class="work-card__go" type="button" data-contact-open data-contact-topic="an XR workshop" data-contact-mailto="mailto:hello@ugaverse.com?subject=XR%20training&amp;body=Hello%20Ugaverse%2C%0D%0A%0D%0AI%27d%20like%20to%20know%20more%20about%20XR%20training.%0D%0A%0D%0AWho%20it%20is%20for%3A%0D%0AWhat%20we%20want%20to%20learn%20or%20see%3A%0D%0ANumber%20of%20people%3A%0D%0A%0D%0AMy%20name%3A%0D%0AMy%20phone%20or%20WhatsApp%3A" aria-label="Book a workshop">Book a workshop <span aria-hidden="true">&rarr;</span></button>
+                        </div>
+                    </article>
                 </div>
-                <div class="vrc__photos vrc__photos--side reveal" style="--d: 120ms">
-                    <figure class="vrc__photo vrc__photo--lead"><img src="images/web/enju-launch.webp" width="840" height="560" alt="A man using a VR headset and hand controllers at the Enju Heritage launch" loading="lazy"></figure>
-                    <figure class="vrc__photo"><img src="images/web/keepers-vr.webp" width="840" height="560" alt="A guide helping a guest in a VR headset at the Keepers VR experience" loading="lazy"></figure>
-                    <figure class="vrc__photo"><img src="images/web/timeless-frames-vr.webp" width="840" height="560" alt="A guest being fitted with a VR headset in front of the Timeless Frames banner" loading="lazy"></figure>
+
+                <div class="rf-equip__community reveal">
+                    <div>
+                        <h3>Questions about XR?</h3>
+                        <p>Join creators in our WhatsApp group to learn, share your work and get feedback.</p>
+                    </div>
+                    <a class="button button--large rf-whatsapp" href="https://chat.whatsapp.com/DdUujTqN3BM3EPWf0W3PRR" target="_blank" rel="noopener noreferrer">Join the WhatsApp group</a>
                 </div>
             </div>
         </section>
 
-        <!-- 6. Out in the world: the moving photo band and its lightbox (same as the current homepage) -->
+        <!-- 8. Out in the world: the moving photo band and its lightbox -->
         <section class="section studio-band" id="projects">
             <div class="container">
                 <header class="studio-head studio-head--center reveal">
-                    <p class="eyebrow">Out in the world</p>
-                    <h2>Stories, on the ground.</h2>
+                    <p class="eyebrow">Photos from our projects</p>
+                    <h2>Where we've been.</h2>
                 </header>
             </div>
             <!-- to add a photo, paste one more <button class="photo-band__item"> line; the script numbers it and makes the loop -->
@@ -323,6 +371,7 @@
                 <button class="photo-band__arrow photo-band__arrow--next" type="button" data-band-step="1" aria-label="Scroll photos forward"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
             </div>
 
+            <div class="container"><p class="rf-band__hint rf-band__hint--below">Tap a photo to open it.</p></div>
             <dialog class="photo-lightbox" aria-label="Photo viewer">
                 <img class="photo-lightbox__img" alt="" draggable="false">
                 <p class="photo-lightbox__caption" aria-live="polite" hidden><span class="photo-lightbox__caption-text"></span> <a class="photo-lightbox__caption-link" href="#" hidden>View this project <span aria-hidden="true">&rarr;</span></a></p>
@@ -333,29 +382,15 @@
             </dialog>
         </section>
 
-        <!-- 7. Closing line -->
+        <!-- 9. Closing: two paths -->
         <section class="section conversion-cta" id="story">
             <div class="container conversion-cta__inner reveal">
-                <h2>Uganda is full of stories. What's yours?</h2>
-                <p class="conversion-cta__copy">Tell us about your idea. We'll turn it into an experience.</p>
+                <h2>Ready to start your next project?</h2>
+                <p class="conversion-cta__copy">Tell us your idea. We will turn it into an experience worth having.</p>
                 <div class="studio-close__actions">
-                    <a class="button button--primary button--large conversion-cta__button" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Tell us your story</a>
-                    <a class="studio-close__mail" href="https://api.whatsapp.com/message/DG6ALDQCU2OBO1?autoload=1&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a>
-                    <a class="studio-close__mail" href="mailto:hello@ugaverse.com">Write to hello@ugaverse.com</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="community" id="whatsapp" aria-labelledby="community-title">
-            <div class="container community__inner reveal">
-                <div class="community__text">
-                    <p class="eyebrow">Community</p>
-                    <h2 id="community-title">Have questions about XR?</h2>
-                    <p>Join our WhatsApp community to learn from creators, share your work, and get feedback on projects.</p>
-                </div>
-                <div class="studio-community__actions">
-                    <a class="button button--yellow button--large community__button" href="https://chat.whatsapp.com/DdUujTqN3BM3EPWf0W3PRR" target="_blank" rel="noopener noreferrer">Join the WhatsApp group</a>
-                    <p class="studio-community__more">or <a href="https://linktr.ee/ugaverse" target="_blank" rel="noopener noreferrer">find more information here</a></p>
+                    <a class="button button--primary button--large conversion-cta__button" href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Start a project</a>
+                    <button class="studio-close__mail studio-close__talk" type="button" data-contact-open>Talk to us <span aria-hidden="true">&rarr;</span></button>
+                    <a class="studio-close__mail" href="#work">See our work <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
         </section>
@@ -366,14 +401,14 @@
         <div class="container site-footer__inner">
             <div class="site-footer__brand">
                 <a class="logo" href="index.html" aria-label="Ugaverse home">ugaverse</a>
-                <p>Immersive storytelling, made in Uganda</p>
+                <p>Your one-stop immersive shop.</p>
             </div>
             <nav class="site-footer__links" aria-label="Footer">
-                <a href="#work">Our work</a>
-                <a href="#how">How we work</a>
-                <a href="#vr-corner">VR Corner</a>
+                <a href="#work">Projects</a>
+                <a href="#create">Services</a>
+                <a href="#equip">Tools</a>
                 <a href="#about">About</a>
-                <a href="#story">Your story</a>
+                <a href="#story">Start a project</a>
             </nav>
             <div class="site-footer__contact">
                 <p class="site-footer__label">Get in touch</p>
@@ -393,5 +428,18 @@
             <p class="site-footer__legal">&copy; <span data-current-year>2026</span> Ugaverse Studios. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Contact card: opened by "Talk to us" in the hero -->
+    <dialog class="rf-contact" aria-labelledby="rf-contact-title">
+        <button class="rf-contact__close" type="button" data-contact-close autofocus aria-label="Close"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        <p class="eyebrow">Talk to us</p>
+        <h2 id="rf-contact-title">Pick what suits you.</h2>
+        <p class="rf-contact__topic" data-contact-topic-line hidden>You are asking about: <strong data-contact-topic-name></strong></p>
+        <p class="rf-contact__copy">Send us a message and tell us what you need.</p>
+        <a class="button button--primary button--large rf-contact__button" href="https://api.whatsapp.com/message/DG6ALDQCU2OBO1?autoload=1&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+        <a class="button button--yellow button--large rf-contact__button" href="mailto:hello@ugaverse.com" data-contact-email>Email hello@ugaverse.com</a>
+        <button class="rf-contact__copybtn" type="button" data-copy-email="hello@ugaverse.com" aria-live="polite">Copy email address</button>
+        <p class="rf-contact__note">Have a bigger idea? <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5bg-QyyMmqu6FZcYjOgEsB1uZ6Co4-TjHveCgsK9f9Ded2g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Start a project</a></p>
+    </dialog>
 </body>
 </html>

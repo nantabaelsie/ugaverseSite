@@ -34,10 +34,18 @@
             if (now && slide.dataset.label) {
                 now.innerHTML = "";
                 now.append("Now showing: ");
-                const link = document.createElement("a");
-                link.href = slide.dataset.href || "#work";
-                link.textContent = slide.dataset.label + " →";
-                now.append(link);
+                if (slide.dataset.href) {
+                    const link = document.createElement("a");
+                    link.href = slide.dataset.href;
+                    link.textContent = slide.dataset.label + " →";
+                    now.append(link);
+                } else {
+                    // no data-href: the caption is plain text and leads nowhere
+                    const text = document.createElement("span");
+                    text.className = "studio-hero__now-label";
+                    text.textContent = slide.dataset.label;
+                    now.append(text);
+                }
             }
             // warm up the next photo so the fade never shows a blank frame
             const upcoming = slides[(index + 1) % slides.length].querySelector("img");
